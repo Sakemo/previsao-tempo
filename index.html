@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="static\css\style.css" />
+  </head>
+  <body>
+    <div style="display: block" class="overlay" id="over"></div>
+    <div id="trailer" class="is_overlay">
+      <video
+        autoplay="true"
+        id="video"
+        width="100%"
+        height="auto"
+        loop="loop"
+        preload="auto"
+        muted="true"
+      >
+        <source src="videos/video.mp4" />
+      </video>
+    </div>
+
+    <div id="preloader">
+      <i id="wait" class="fa fa-spinner"></i>
+    </div>
+
+    <div class="card" id="card-id">
+      <div class="search">
+        <form style="width: 100%">
+          <input
+            id="search"
+            type="text"
+            placeholder="Digite a sua cidade 🌎"
+            spellcheck="false"
+          />
+        </form>
+      </div>
+      <div class="wheater">
+        <img src="" class="weater-icon" />
+        <h1 class="temp">22ºC</h1>
+        <h2 class="city">undefined</h2>
+        <div class="details">
+          <div class="col">
+            <img id="h_icon" src="images/raindrops.svg" />
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidade</p>
+            </div>
+          </div>
+          <div class="col">
+            <img id="w_icon" src="images/wind-snow.svg" />
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Vento</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+    <script src="detect.min.js"></script>
+    <script type="text/javascript">
+      var Preloader = function (element) {
+        var video = document.getElementById(element),
+          preloader = document.getElementById("preloader"),
+          enter = document.getElementById("enter");
+
+        var ua = detect.parse(navigator.userAgent);
+        if (ua.os.family === "Android") {
+          video.setAttribute("controls", "controls");
+        }
+
+        var api = {};
+
+        api.startCheckingLoading = function () {
+          video.addEventListener(
+            "click",
+            function () {
+              video.play();
+            },
+            false
+          );
+        };
+
+        return api;
+      };
+
+      window.addEventListener("load", function () {
+        var preloader = Preloader("video");
+        preloader.startCheckingLoading();
+      });
+    </script>
+  </body>
+</html>
