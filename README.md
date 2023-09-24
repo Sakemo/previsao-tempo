@@ -32,6 +32,10 @@ Certifique-se de ter os seguintes recursos instalados antes de executar o projet
 - [Font Awesome](https://fontawesome.com/) para ícones.
 - Vídeos de fundo que representam as condições climáticas.
 
+## Demonstração
+
+Você pode ver uma demonstração deste projeto em [Demo](https://sakemo.github.io/previsao-tempo/).
+
 ## Autor
 
 - King | Alex K.M Chaves
@@ -77,6 +81,10 @@ Make sure you have the following resources installed before running the project:
 - [OpenWeather API](https://openweathermap.org/api) to get weather forecast data.
 - [Font Awesome](https://fontawesome.com/) for icons.
 - Background videos representing weather conditions.
+
+## Demonstration
+
+You can see a demonstration of this project at [Demo](https://sakemo.github.io/previsao-tempo/).
 
 ## Author
 
