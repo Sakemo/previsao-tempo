@@ -2,7 +2,7 @@ var dataAtual = new Date();
 var hora = dataAtual.getHours();
 if (hora < 10) hora = "0" + hora;
 console.log("Hora atual: " + hora);
-if(hora >= 18){
+if(hora <= 18){
     document.getElementById('card-id').classList.add('card-night')
     document.getElementById('card-id').classList.remove('card')
     document.querySelector('.overlay').classList.add('overlay-night');
